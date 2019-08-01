@@ -231,7 +231,7 @@ index cd944f4..107c83b 100644
 我们已经提过，对于 Git 来说，项目历史就是由一次次 commit 组成的，并且每一次 commit 都是对当时项目状态的一个记录：
 
 <div style="text-align:center">
-<img src="./imgs/git_learning_blog/2/commit_hisotry.jpg"/><br/>
+<img src="./imgs/git_learning_blog/2/commit_history.jpg"/><br/>
 commit历史示意图
 </div>
 
