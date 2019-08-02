@@ -11,7 +11,7 @@
 
 <br/><br/><br/>
 
-[上一章]()我们了解了版本控制软件 Git 以及它的安装方法，而这一章我们将看到利用 Git 对项目进行版本控制需要哪些操作，以及这些操作背后的原理是什么。
+[上一章](./git_learning_1.html)我们了解了版本控制软件 Git 以及它的安装方法，而这一章我们将看到利用 Git 对项目进行版本控制需要哪些操作，以及这些操作背后的原理是什么。
 
 在我们实际操作 Git 之前，需要说明的是，Git 虽然是“版本控制系统”，但其实管理的是“提交历史”。一般项目做出一定量的改动，比如修正了一个BUG后，我们就会进行一次提交（commit），commit 相当于告诉 Git：将项目当前的状态记录下来（也叫形成一个 __项目快照__ —— __snapshot__）。换句话说，一次 commit 就产生项目的一次“历史节点”，而 Git 管理的就是由 commit 组成的历史。我们通过 commit 历史，就可以查看项目的历次改动，在必要时还可以将项目回退至某个 commit。
 
@@ -541,5 +541,6 @@ $
 
 注释：
 
-1. 没有人会去记 Git 的所有配置项，一般情况下我们只在需要利用 Git 配置完成某个目的时，再查询 Git 如何配置，比如“禁止删除服务器上的 commit 历史”。完整的 Git 配置文档可在 [Git 配置](https://stackoverflow.com/questions/9392365/how-would-git-handle-a-sha-1-collision-on-a-blob) 查询。
-2. 理论上参与 SHA-1 运算的数据不一样，也可以出现一样的结果数字，但是这种情况对于正常使用来说，完全不用担心，如果你对出现了该情况时 Git 会有什么表现感兴趣，可以参考 stackoverflow 网站上的这个[问题](https://stackoverflow.com/questions/9392365/how-would-git-handle-a-sha-1-collision-on-a-blob)。
+> 1\. 没有人会去记 Git 的所有配置项，一般情况下我们只在需要利用 Git 配置完成某个目的时，再查询 Git 如何配置，比如“禁止删除服务器上的 commit 历史”。完整的 Git 配置文档可在 [Git 配置](https://stackoverflow.com/questions/9392365/how-would-git-handle-a-sha-1-collision-on-a-blob) 查询。
+
+> 2\. 理论上参与 SHA-1 运算的数据不一样，也可以出现一样的结果数字，但是这种情况对于正常使用来说，完全不用担心，如果你对出现了该情况时 Git 会有什么表现感兴趣，可以参考 stackoverflow 网站上的这个[问题](https://stackoverflow.com/questions/9392365/how-would-git-handle-a-sha-1-collision-on-a-blob)。
