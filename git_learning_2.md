@@ -79,11 +79,10 @@ Git 的配置项分为三个级别：系统级、用户级、项目级。从字�
    除了用户名和邮箱，Git 还要求每一次 commit 都给出“提交信息”，用于解释该 commit 提交的原因、目的等，因此在我们进行 commit 时，Git 会打开一个文本编辑器供我们输入提交信息，而打开哪一个文本编辑器则允许我们自定义。Git 所打开的文本编辑器会根据 `core.editor` 配置项决定，一般我们将该配置项设置为用户级：
 
     ```bash
-    git config --global core.editor "vim" #如果希望使用带有图形界面的文本编辑器
-                                          #在Ubuntu可以设为gedit
+    git config --global core.editor "vim"
     ```
 
-    > _如果没有设置 `core.editor`，那么 Git 会采用系统默认文本编辑器，比如在 Ubuntu 中为 nano_
+    > _如果希望使用带有图形界面的文本编辑器，在 Ubuntu 可以设为 gedit。如果没有设置 `core.editor`，那么 Git 会采用系统默认文本编辑器，比如在 Ubuntu 中为 nano_
 
 <br id="3"/><br id="3-1"/>
 
