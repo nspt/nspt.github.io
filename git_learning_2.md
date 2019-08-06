@@ -409,7 +409,7 @@ $ cat main.cpp
 using namespace std;
 int main()
 {
-        int deposit_m, interest_rate_m;
+        double deposit_m, interest_rate_m, total_income;
 
         cout<<"Please enter the monthly deposit"<<endl;
         cin>>deposit_m;
