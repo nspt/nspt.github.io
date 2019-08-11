@@ -75,7 +75,7 @@
 
 <br/>
 
-### 14.若在第四步时勾选了 “Additional icons”，则安装后桌面会有一个名为 “Git Bash” 的快捷方式，可双击以打开 Git 的命令行（操作方式为 Unix/Linux 风格，而不是 Windows 的 Cmd 风格）：
+### 14.若在第四步时勾选了 “Additional icons”，则安装后桌面会有一个名为 “Git Bash”[<sup>2</sup>](#annotation) 的快捷方式，可双击以打开 Git 的命令行（操作方式为 Unix/Linux 风格，而不是 Windows 的 Cmd 风格）：
 
 ![step13](./imgs/git_learning_blog/git_for_windows_installation/step13.jpg)
 
@@ -94,3 +94,5 @@
 注释：
 
 > 1\. “换行”在 Windows 和 Unix/Linux 下是不一样的，虽然编辑时都是敲击 Enter 以输入“换行”，但是在 Windows 环境下，一次换行实际上存储了两个字符：回车符（Carriage-Return）和换行符（Line-Feed），简称 CRLF，而在 Unix/Linux 环境下，一次换行就是一个字符：换行符（Line-Feed）。在 Unix/Linux 环境下用 Vim 打开带有 CRLF 的文本文件时，回车符 CR 会被显示为一个转角箭头。
+
+> 2\. Git Bash 就是运行于 Windows 操作系统的虚拟 Bash，也即 Linux 环境下的“命令行”，通过 Git Bash，我们可以执行大部分 Linux 基本命令，如 cd、ls 等，它甚至还附带了 vim。通过 Git Bash 学习和使用 Git，可以直接参照 Linux 环境下的操作。
