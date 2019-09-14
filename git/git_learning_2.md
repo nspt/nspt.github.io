@@ -1,6 +1,5 @@
 ---
 layout: default
-title: Git：基本设置，基本操作与工作原理
 ---
 - ## [1.让 Git 接手项目的历史管理](#1)
 - ## [2.Git 的配置项](#2)
@@ -18,12 +17,12 @@ title: Git：基本设置，基本操作与工作原理
 
 <br/><br/><br/>
 
-[上一章](./git_learning_1.html)我们了解了版本控制软件 Git 以及它的安装方法，而这一章我们将看到利用 Git 对项目进行版本控制需要哪些操作，以及这些操作背后的原理是什么。
+[上一章](./git_learning_1.md)我们了解了版本控制软件 Git 以及它的安装方法，而这一章我们将看到利用 Git 对项目进行版本控制需要哪些操作，以及这些操作背后的原理是什么。
 
 不过在我们实际操作 Git 之前，需要说明的是，Git 虽然是“版本控制系统”，但其实管理的是“提交历史”。一般项目做出一定量的改动，比如修正了一个BUG后，我们就会进行一次提交（commit），commit 相当于告诉 Git：将项目当前的状态记录下来。换句话说，一次 commit 就产生项目的一个“历史节点”，而 Git 管理的就是由 commit 组成的历史。我们通过 commit 历史，就可以查看项目的历次改动，在必要时还可以将项目回退至某个 commit。
 
 <div style="text-align:center">
-<img src="./imgs/git_learning_blog/2/commit_history.jpg"/><br/>
+<img src="/assets/images/git_learning_blog/2/commit_history.jpg"/><br/>
 commit历史示意图
 </div>
 
@@ -258,7 +257,7 @@ $
 我们已经提过，对于 Git 来说，项目历史就是由一次次 commit 组成的，并且每一次 commit 都是对当时项目状态的一个记录：
 
 <div style="text-align:center">
-<img src="./imgs/git_learning_blog/2/commit_history.jpg"/><br/>
+<img src="/assets/images/git_learning_blog/2/commit_history.jpg"/><br/>
 commit历史示意图
 </div>
 
@@ -267,7 +266,7 @@ commit历史示意图
 每一个 commit 对象都存储了 commit id、作者（Author）、提交时间（Date）、提交信息（Message）、上一个 commit（Parent）的 id 和一个 **项目快照** （Snapshot）：
 
 <div style="text-align:center">
-<img src="./imgs/git_learning_blog/2/commit_object.jpg"/><br/>
+<img src="/assets/images/git_learning_blog/2/commit_object.jpg"/><br/>
 <code>MyProject</code> 第二次提交所创建的 commit 对象示意图
 </div>
 
@@ -282,7 +281,7 @@ commit历史示意图
 假设我们添加了两个新文件：A 和 B，然后将他们 add 并 commit ，形成了 commit 1 。接着我们修改了 B ，并将修改后的文件 B' add 、 commit，形成了 commit 2。那么在 commit 1 中存储的项目快照将包含 A 、 B，而 commit 2 中存储的项目快照包含的则是“对 A 的引用”和 B'：
 
 <div style="text-align:center">
-<img src="./imgs/git_learning_blog/2/file_reuse.jpg"/><br/>
+<img src="/assets/images/git_learning_blog/2/file_reuse.jpg"/><br/>
 文件复用示意图
 </div>
 
@@ -343,49 +342,49 @@ $ git commit -m "Add module b"
 首先，我们通过 `git init` 初始化了 MyProject，此时三个区域均为空，如下图：
 
 <div style="text-align:center">
-<img src="./imgs/git_learning_blog/2/step1.jpg"/><br/>
+<img src="/assets/images/git_learning_blog/2/step1.jpg"/><br/>
 <code>git init</code> 之后三个区域示意图
 </div>
 
 接着，我们编写了 main.cpp，此时仓库和暂存区依然为空，工作区有了 main.cpp，如下图：
 
 <div style="text-align:center">
-<img src="./imgs/git_learning_blog/2/step2.jpg"/><br/>
+<img src="/assets/images/git_learning_blog/2/step2.jpg"/><br/>
 编写 main.cpp 之后三个区域示意图
 </div>
 
 然后，我们通过 `git add` 将 main.cpp 加入到了暂存区，此时工作区和暂存区都有了 main.cpp（记住，暂存区就是一个项目快照，为了方便理解你甚至可以忽略 “快照”），但仓库依然为空，如下图：
 
 <div style="text-align:center">
-<img src="./imgs/git_learning_blog/2/step3.jpg"/><br/>
+<img src="/assets/images/git_learning_blog/2/step3.jpg"/><br/>
 <code>git add main.cpp</code> 之后三个区域示意图
 </div>
 
 最后，我们通过 `git commit` 生成了一个 commit 对象，这一步操作会将暂存区复制为新的 commit 对象的项目快照，再将新的 commit 对象加入仓库，此时三个区域的情况如下图：
 
 <div style="text-align:center">
-<img src="./imgs/git_learning_blog/2/step4.jpg"/><br/>
+<img src="/assets/images/git_learning_blog/2/step4.jpg"/><br/>
 首次 <code>git commit</code> 之后三个区域示意图
 </div>
 
 接着我们又对 main.cpp 进行了修改，假设改动后的文件为 main.cpp'，那么改动后，三个区域情况如下图：
 
 <div style="text-align:center">
-<img src="./imgs/git_learning_blog/2/step5.jpg"/><br/>
+<img src="/assets/images/git_learning_blog/2/step5.jpg"/><br/>
 修改 main.cpp 之后三个区域示意图
 </div>
 
 再次 `git add`，将改动后的 main.cpp，即 main.cpp' 加入到暂存区（将暂存区中的 main.cpp 替换成 main.cpp'）：
 
 <div style="text-align:center">
-<img src="./imgs/git_learning_blog/2/step6.jpg"/><br/>
+<img src="/assets/images/git_learning_blog/2/step6.jpg"/><br/>
 将 main.cpp' <code>git add</code> 之后三个区域示意图
 </div>
 
 最后，通过 `git commit` 完成我们的第二次提交，也就是创建第二个 commit 对象，这一步同样是先将暂存区拷贝为第二个 commit 对象的项目快照，再将 commit 对象加入仓库：
 
 <div style="text-align:center">
-<img src="./imgs/git_learning_blog/2/step7.jpg"/><br/>
+<img src="/assets/images/git_learning_blog/2/step7.jpg"/><br/>
 第二次 <code>git commit</code> 之后三个区域示意图
 </div>
 
@@ -399,7 +398,7 @@ $ git commit -m "Add module b"
 我们刚才已经通过示意图看到了两次提交后的 MyProject 的三个区域情况如下：
 
 <div style="text-align:center">
-<img src="./imgs/git_learning_blog/2/step8.jpg"/><br/>
+<img src="/assets/images/git_learning_blog/2/step8.jpg"/><br/>
 第二次 <code>git commit</code> 之后三个区域示意图
 </div>
 
@@ -446,7 +445,7 @@ $ g++ main.o -o MyProgram
 那么三个区域的情况就会变成：
 
 <div style="text-align:center">
-<img src="./imgs/git_learning_blog/2/step9.jpg"/><br/>
+<img src="/assets/images/git_learning_blog/2/step9.jpg"/><br/>
 将 main.cpp' 修改成 main.cpp'' 并编译后三个区域示意图
 </div>
 
@@ -490,7 +489,7 @@ $ git add main.cpp
 此时三个区域的情况如下图：
 
 <div style="text-align:center">
-<img src="./imgs/git_learning_blog/2/step10.jpg"/><br/>
+<img src="/assets/images/git_learning_blog/2/step10.jpg"/><br/>
 将 main.cpp'' 加入暂存区后三个区域示意图
 </div>
 
@@ -526,7 +525,7 @@ $
 则三个区域会变成：
 
 <div style="text-align:center">
-<img src="./imgs/git_learning_blog/2/step11.jpg"/><br/>
+<img src="/assets/images/git_learning_blog/2/step11.jpg"/><br/>
 <code>git commit</code> 后三个区域示意图
 </div>
 

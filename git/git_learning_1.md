@@ -64,7 +64,7 @@ Windows环境下安装 Git 有很多选择，因为有很多基于Git的图形�
 
 <br/>
 
-[下一章](./git_learning_2.html)我们将会介绍 Git 的基本操作方式。
+[下一章](./git_learning_2.md)我们将会介绍 Git 的基本操作方式。
  
 <br id="annotation"/>
 
