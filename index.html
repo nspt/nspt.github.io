@@ -1,0 +1,13 @@
+---
+layout: blog_list
+---
+{% for post in site.posts %}
+		<blockquote>
+			<h2>
+				<a href="{{ post.url }}">{{ post.title }}</a>
+			</h2>
+		</blockquote>
+		<p>
+			{{ post.description }}
+		</p>
+{% endfor %}

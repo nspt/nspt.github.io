@@ -1,5 +1,8 @@
 ---
 layout: article
+category: git
+title: Git：版本控制、Git简介与安装
+description: Git学习系列的第一章，简介版本控制的概念，以及Git的基本信息及安装方法。
 ---
 - ## [1.什么是版本控制（Version Control）](#1)
 - ## [2.Git 简介](#2)
