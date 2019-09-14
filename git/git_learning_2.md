@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: article
 ---
 - ## [1.让 Git 接手项目的历史管理](#1)
 - ## [2.Git 的配置项](#2)
@@ -751,4 +751,4 @@ $
 
 > 1\. 没有人会去记 Git 的所有配置项，一般情况下我们只在需要利用 Git 配置完成某个目的时，再查询 Git 如何配置，比如“禁止删除服务器上的 commit 历史”。完整的 Git 配置文档可在 [Git 配置](https://stackoverflow.com/questions/9392365/how-would-git-handle-a-sha-1-collision-on-a-blob) 查询。
 
-> 2\. 理论上参与 SHA-1 运算的数据不一样，也可以出现一样的结果数字，但是这种情况对于正常使用来说，完全不用担心，如果你对出现了该情况时 Git 会有什么表现感兴趣，可以参考 stackoverflow 网站上的这个[问题](https://stackoverflow.com/questions/9392365/how-would-git-handle-a-sha-1-collision-on-a-blob)。
+> 2\. 理论上参与 SHA-1 运算的数据不一样，也可以出现一样的结果数字，但是这种情况对于正常使用来说，完全不用担心，如果你

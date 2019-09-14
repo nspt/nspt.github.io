@@ -5,7 +5,7 @@
 
 body{
 	background:top center no-repeat #252525;
-	color:#e8e8e8;
+	color: #d8d8d8;
 	font-size: 16px;
 }
 
@@ -16,6 +16,7 @@ body{
 
 #site_header {
 	margin-top: 50px;
+	padding-top: 0;
 	margin-bottom: 0;
 	a {
 		font-weight: bold;
@@ -26,18 +27,31 @@ body{
 #site_content {
 	float: left;
 	margin-top: 20px;
-	border-right: 1px solid #e8e8e8;
+	padding-top: 0;
+	border-right: 1px solid #d8d8d8;
 	max-width: 790px;
+	&>div {
+		margin: 15px;
+	}
 }
 
 #site_sidebar {
 	width: 200px;
 	margin-top: 20px;
 	margin-left: 800px;
+	padding-top: 0;
 	.site_sidebar_item {
+		margin: 5px;
 		h3 {
-			padding-bottom: 2px;
-			border-bottom: 1px solid #e8e8e8;
+			padding-bottom: 3px;
+			border-bottom: 1px solid #d8d8d8;
+		}
+		a {
+			color: #f0e7d5;
+		}
+		ul {
+			padding-left: 0;
+			margin-left: 15px;
 		}
 	}
 }
@@ -53,4 +67,17 @@ article {
 	a:link,a:visited,a:active {
 		color:#0099ff
 	}
+	blockquote {
+		padding: 0 0 0 10px;
+		margin-left: 20px;
+		border-left: 3px solid #0099ff;
+	}
+	div.img {
+		margin-bottom: 20px;
+		text-align: center;
+	}
+}
+
+h1,h2,h3,h4,h5,h6 {
+	color:#e8e8e8;
 }

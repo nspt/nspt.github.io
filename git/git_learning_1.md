@@ -1,3 +1,6 @@
+---
+layout: article
+---
 - ## [1.什么是版本控制（Version Control）](#1)
 - ## [2.Git 简介](#2)
 - ## [3.Git 的安装](#3)

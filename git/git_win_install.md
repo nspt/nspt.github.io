@@ -1,3 +1,6 @@
+---
+layout: article
+---
 ### 1.获取 Git for Windows 安装包
 前往 [https://git-scm.com/download/win](https://git-scm.com/download/win) 获取安装包
 
