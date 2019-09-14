@@ -1,4 +1,9 @@
-
+---
+layout: article
+category: linux
+title: Linux 简介与安装
+description: 简介操作系统的概念，Linux的含义，以及Linux发行版的安装方法。
+---
 - ## [1.什么是操作系统](#1)
     - ### [1.1 硬件抽象](#1-1)
     - ### [1.2 系统调用](#1-2)
@@ -56,13 +61,13 @@ GNU/Linux 发行版多种多样，但是 Ubuntu 因为其友好的安装过程�
 选择希望下载的版本后点击“Download”即可开始下载 Ubuntu 的镜像文件，假设我们下载19.04版本（18.04甚至16.04、14.04的安装过程基本一致，但是越旧的版本对机器性能的要求可能越低，下载旧版 Ubuntu 请前往 https://ubuntu.com/download/alternative-downloads）：
 
 <div style="text-align:center">
-<img src="./imgs/linux/introduction_and_installation/download_ubuntu_step1.jpg"/><br/>
+<img src="/assets/images/linux/introduction_and_installation/download_ubuntu_step1.jpg"/><br/>
 </div><br/>
 
 下载好 Ubuntu 的镜像文件后，下一步就是选择安装 Ubuntu 的方式——双系统或者虚拟机——然后安装Ubuntu。下载好的ISO文件如下图所示：
 
 <div style="text-align:center">
-<img src="./imgs/linux/introduction_and_installation/download_ubuntu_step2.jpg"/><br/>
+<img src="/assets/images/linux/introduction_and_installation/download_ubuntu_step2.jpg"/><br/>
 </div>
 
 ### 3.1 双系统
@@ -94,19 +99,19 @@ GNU/Linux 发行版多种多样，但是 Ubuntu 因为其友好的安装过程�
 点击首页最显眼的按钮 “Download VirtualBox” 即可进入 VirtualBox 的下载界面：
 
 <div style="text-align:center">
-<img src="./imgs/linux/introduction_and_installation/download_vbox_step1.jpg"/><br/>
+<img src="/assets/images/linux/introduction_and_installation/download_vbox_step1.jpg"/><br/>
 </div><br/>
 
 对于本机操作系统为 Windows 的用户来说，点击 “Windows Hosts” 即可开始下载 VirtualBox 的安装包：
 
 <div style="text-align:center">
-<img src="./imgs/linux/introduction_and_installation/download_vbox_step2.jpg"/><br/>
+<img src="/assets/images/linux/introduction_and_installation/download_vbox_step2.jpg"/><br/>
 </div><br/>
 
 下载好安装包后，双击运行，然后一路点击 “下一步” 直至安装完成即可。若希望将 VirtualBox 安装至自己习惯的软件安装目录，只需在第二步中选择指定目录：
 
 <div style="text-align:center">
-<img src="./imgs/linux/introduction_and_installation/install_vbox.jpg"/><br/>
+<img src="/assets/images/linux/introduction_and_installation/install_vbox.jpg"/><br/>
 </div>
 
 <br id="3-2-2"/>
@@ -117,53 +122,53 @@ GNU/Linux 发行版多种多样，但是 Ubuntu 因为其友好的安装过程�
 > _若希望安装32位的 Ubuntu，则在“版本”处选择 Ubuntu（32bit），需要注意的是，Ubuntu自18.04版本开始不再提供32位系统，若需要32位 Ubuntu，请下载16.04版本或更早的14.04版本。_
 
 <div style="text-align:center">
-<img src="./imgs/linux/introduction_and_installation/create_vm_step1.jpg"/><br/>
+<img src="/assets/images/linux/introduction_and_installation/create_vm_step1.jpg"/><br/>
 </div><br/>
 
 第二步是设置虚拟机的内存大小，此处根据自身机器性能进行合理划分即可（对于 Ubuntu，建议不要低于1024MB），然后选择“下一步”：
 
 <div style="text-align:center">
-<img src="./imgs/linux/introduction_and_installation/create_vm_step2.jpg"/><br/>
+<img src="/assets/images/linux/introduction_and_installation/create_vm_step2.jpg"/><br/>
 </div><br/>
 
 第三步是为虚拟机创建一个虚拟硬盘（在本机中表现为一个文件），若没有已存在并打算直接使用的虚拟硬盘文件，此处选择默认项 “现在创建虚拟硬盘” 即可，然后点击 “创建” ：
 
 <div style="text-align:center">
-<img src="./imgs/linux/introduction_and_installation/create_vm_step3.jpg"/><br/>
+<img src="/assets/images/linux/introduction_and_installation/create_vm_step3.jpg"/><br/>
 </div><br/>
 
 第四步是选择新创建的虚拟硬盘文件的类型，三种格式 VirtualBox 都支持。其中 VDI 为默认选项，也是仅被 VirtualBox 支持的格式，VHD 是 Microsoft Virtual PC 支持的格式，VMDK 是由 VMware 所开发并支持的格式，但是 VirtualBox 和 QEMU（另一个虚拟机软件）都支持该格式[<sup>4</sup>](#annotation)。此处若无特殊需要，可默认选择 VDI，然后点击 “下一步”：
 
 <div style="text-align:center">
-<img src="./imgs/linux/introduction_and_installation/create_vm_step4.jpg"/><br/>
+<img src="/assets/images/linux/introduction_and_installation/create_vm_step4.jpg"/><br/>
 </div><br/>
 
 第五步是设置虚拟硬盘文件的属性：动态分配或固定大小。在下一步中我们会设置虚拟硬盘的大小，若此时设为固定大小，则虚拟硬盘文件会直接占据我们下一步所设置的空间大小，若此时设为动态分配，则虚拟硬盘文件会根据虚拟机实际使用情况动态变化虚拟硬盘文件的大小，但是上限是我们所设置的大小。设为动态分配较为节省空间，但是在虚拟机中进行硬盘操作时可能会比使用固定大小较慢。若无特殊需求，默认动态分配，然后点击“下一步”即可：
 
 <div style="text-align:center">
-<img src="./imgs/linux/introduction_and_installation/create_vm_step5.jpg"/><br/>
+<img src="/assets/images/linux/introduction_and_installation/create_vm_step5.jpg"/><br/>
 </div><br/>
 
 第六步是设置虚拟硬盘的大小，可根据自身机器性能和需求进行设置，若暂时不知道需要多少，可以在上一步选择动态分配，然后这一步设置一个较大的数值，设置好后点击 “创建”：
 
 <div style="text-align:center">
-<img src="./imgs/linux/introduction_and_installation/create_vm_step6.jpg"/><br/>
+<img src="/assets/images/linux/introduction_and_installation/create_vm_step6.jpg"/><br/>
 </div><br/>
 
 至此，我们就创建好一台虚拟机了，已创建的虚拟机位于左侧列表，对于已创建的虚拟机，我们可以选中后点击 “设置” 以修改其属性：
 
 <div style="text-align:center">
-<img src="./imgs/linux/introduction_and_installation/create_vm_step7.jpg"/><br/>
+<img src="/assets/images/linux/introduction_and_installation/create_vm_step7.jpg"/><br/>
 </div><br/>
 
 建议修改的设置如下：
 
 <div style="text-align:center">
-<img src="./imgs/linux/introduction_and_installation/vm_suggest_config_1.jpg"/><br/>
+<img src="/assets/images/linux/introduction_and_installation/vm_suggest_config_1.jpg"/><br/>
 </div><br/>
 
 <div style="text-align:center">
-<img src="./imgs/linux/introduction_and_installation/vm_suggest_config_2.jpg"/><br/>
+<img src="/assets/images/linux/introduction_and_installation/vm_suggest_config_2.jpg"/><br/>
 </div><br/>
 
 <br id="3-2-3"/>
@@ -174,21 +179,21 @@ GNU/Linux 发行版多种多样，但是 Ubuntu 因为其友好的安装过程�
 为此，我们需要先在虚拟机设置页面将之前下载好的 Ubuntu 镜像文件 “插入” 到虚拟机的光驱上：
 
 <div style="text-align:center">
-<img src="./imgs/linux/introduction_and_installation/init_vm_step1.jpg"/><br/>
+<img src="/assets/images/linux/introduction_and_installation/init_vm_step1.jpg"/><br/>
 </div><br/>
 
 <div style="text-align:center">
-<img src="./imgs/linux/introduction_and_installation/init_vm_step2.jpg"/><br/>
+<img src="/assets/images/linux/introduction_and_installation/init_vm_step2.jpg"/><br/>
 </div><br/>
 
 <div style="text-align:center">
-<img src="./imgs/linux/introduction_and_installation/init_vm_step3.jpg"/><br/>
+<img src="/assets/images/linux/introduction_and_installation/init_vm_step3.jpg"/><br/>
 </div><br/>
 
 将镜像文件以光驱形式“插入”虚拟机后，即可打开虚拟机，开始正式安装 Ubuntu：
 
 <div style="text-align:center">
-<img src="./imgs/linux/introduction_and_installation/init_vm_step4.jpg"/><br/>
+<img src="/assets/images/linux/introduction_and_installation/init_vm_step4.jpg"/><br/>
 </div><br/>
 
 > _系统安装过程中会自动下载一些额外软件或新软件，如果不希望、不需要，或者想要尽可能快的安装完毕，可以在启动虚拟机前将主机的网络断开，比如拔掉网线，或在虚拟机设置处关闭虚拟机的网络连接，等虚拟机的操作系统安装完毕后，再联网。_
@@ -196,19 +201,19 @@ GNU/Linux 发行版多种多样，但是 Ubuntu 因为其友好的安装过程�
 因为“插入”了 Ubuntu 的镜像文件，虚拟机启动后会自动执行镜像文件中的系统安装程序，我们可以在安装程序的第一步中设置系统默认语言，然后选择“开始安装Ubuntu”：
 
 <div style="text-align:center">
-<img src="./imgs/linux/introduction_and_installation/install_ubuntu_step1.jpg"/><br/>
+<img src="/assets/images/linux/introduction_and_installation/install_ubuntu_step1.jpg"/><br/>
 </div><br/>
 
 第二步是选择键盘布局（不同国家的键盘布局可能不同，比如德语键盘，有兴趣可以查一下），此处选择默认的汉语即可，点击“继续”：
 
 <div style="text-align:center">
-<img src="./imgs/linux/introduction_and_installation/install_ubuntu_step2.jpg"/><br/>
+<img src="/assets/images/linux/introduction_and_installation/install_ubuntu_step2.jpg"/><br/>
 </div><br/>
 
 第三步是选择安装模式，如果不需要像 LibreOffice 这样的附带办公软件，可以选择最小安装，如果想体验一下开源的各类办公、影音软件，可以选择正常安装，此处我们选择最小安装以尽快完成安装：
 
 <div style="text-align:center">
-<img src="./imgs/linux/introduction_and_installation/install_ubuntu_step3.jpg"/><br/>
+<img src="/assets/images/linux/introduction_and_installation/install_ubuntu_step3.jpg"/><br/>
 </div><br/>
 
 第四步是磁盘分区，如果不知道该如何进行磁盘分区，或者不需要磁盘分区，可以直接选择默认选项 “清除整个磁盘并安装Ubuntu”，然后点击 “现在安装”，再在弹出窗口中点击“继续”：
@@ -216,25 +221,25 @@ GNU/Linux 发行版多种多样，但是 Ubuntu 因为其友好的安装过程�
 > _即便你是出于学习 Linux 系统管理的目的而安装 Linux，也无需此时就进行硬盘分区，因为对于虚拟机而言，添加一个新硬盘（虚拟硬盘）十分简单且廉价，你完全可以等熟悉了 Linux 操作后再临时插一块虚拟硬盘进行分区操作的学习。_
 
 <div style="text-align:center">
-<img src="./imgs/linux/introduction_and_installation/install_ubuntu_step4.jpg"/><br/>
+<img src="/assets/images/linux/introduction_and_installation/install_ubuntu_step4.jpg"/><br/>
 </div><br/>
 
 第五步是设置自己所在的地区，过于简单因此此处略过，来到第六步，设置用户名、计算机名、登陆密码等，设置完成后点击“继续”以进入实际安装过程：
 
 <div style="text-align:center">
-<img src="./imgs/linux/introduction_and_installation/install_ubuntu_step5.jpg"/><br/>
+<img src="/assets/images/linux/introduction_and_installation/install_ubuntu_step5.jpg"/><br/>
 </div><br/>
 
 安装进度条完毕后，会提示需要重启，点击“重新启动”即可：
 
 <div style="text-align:center">
-<img src="./imgs/linux/introduction_and_installation/install_ubuntu_step6.jpg"/><br/>
+<img src="/assets/images/linux/introduction_and_installation/install_ubuntu_step6.jpg"/><br/>
 </div><br/>
 
 重启后会提示 “Please remove the installation medium, then press ENTER”，意思是需要我们移除安装媒介——Ubuntu的镜像文件——然后按 Enter 键以开机：
 
 <div style="text-align:center">
-<img src="./imgs/linux/introduction_and_installation/install_ubuntu_step7.jpg"/><br/>
+<img src="/assets/images/linux/introduction_and_installation/install_ubuntu_step7.jpg"/><br/>
 </div><br/>
 
 > _默认情况下，重启后 VirtualBox 会自动移除插入了的镜像文件，若在“设备”-“分配光驱”中没有打勾了的ISO文件，则点击虚拟机界面，按 Enter 键继续即可。_
@@ -242,7 +247,7 @@ GNU/Linux 发行版多种多样，但是 Ubuntu 因为其友好的安装过程�
 接着，我们就进入了 Ubuntu，其图形界面操作方式和 Windows 是基本相同的，如果想要打开命令行（Shell）的话，可以通过组合键 Ctrl + Alt + T。而在命令行中，通过组合键 Ctrl + Shift + T 则可以打开新的命令行窗口，类似于浏览器的标签页：
 
 <div style="text-align:center">
-<img src="./imgs/linux/introduction_and_installation/ubuntu_show.jpg"/><br/>
+<img src="/assets/images/linux/introduction_and_installation/ubuntu_show.jpg"/><br/>
 </div><br/>
 
 可以通过虚拟机软件的控制界面，即右上角的 × 进行关机，也可以通过虚拟机中的 Ubuntu 右上角的电源键中选择关机以关机。开机只需要在 VirtualBox 管理界面选中虚拟机，然后点击“启动”。
