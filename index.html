@@ -2,6 +2,7 @@
 layout: blog_list
 ---
 {% for post in site.posts %}
+	{% if post.category != "unfinished" %}
 		<blockquote>
 			<h2>
 				<a href="{{ post.url }}">{{ post.title }}</a>
@@ -10,4 +11,8 @@ layout: blog_list
 		<p>
 			{{ post.description }}
 		</p>
+		<p style="text-align:right">
+			{{ post.date | date_to_string }} - 谢维
+		</p>
+	{% endif %}
 {% endfor %}

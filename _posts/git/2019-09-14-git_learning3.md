@@ -1,5 +1,6 @@
 ---
 layout: article
+category: unfinished
 ---
 - ## [1.忽略不需要被Git管理的文件：.gitignore](#1)
 - ## [2.查看、撤销、继续改动当前改动](#2)
