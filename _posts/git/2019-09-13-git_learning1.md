@@ -2,15 +2,29 @@
 layout: article
 category: git
 title: Git：版本控制、Git简介与安装
-description: Git学习系列的第一章，简介版本控制的概念，Git的基本信息及安装方法。
+description: Git学习系列的第一篇，简介版本控制的概念，Git的基本信息及安装方法。
+tag: git_learning1
 ---
+{% assign post_page = site.posts | where: "tag", "git_learning2" %}
+{% assign pre_page  = nil %}
+{% assign gfw_page  = site.posts | where: "tag", "git_win_install" %}
+
+
+
+
+
+
+
+
+
+
 - ## [1.什么是版本控制（Version Control）](#1)
 - ## [2.Git 简介](#2)
 - ## [3.Git 的安装](#3)
-    - ### [3.1 Linux 环境下安装 Git](#3-1)
-    - ### [3.2 Windows 环境下安装 Git](#3-2)
+	- ### [3.1 Linux 环境下安装 Git](#3-1)
+	- ### [3.2 Windows 环境下安装 Git](#3-2)
  
-<br id="1"/><br/><br/>
+<br id="1"/><br/>
 
 ## 1.什么是版本控制（Version Control）
 如果你长期使用过某个软件，或者长期玩过某款游戏，那你就应该听说过“版本”一词，甚至遇到过软件版本的更新，比如腾讯 QQ 最新版是9.1.6版本，英雄联盟最新版是9.14版本。从用户的角度来说，软件的版本往往是越新越好，因为越新的版本一般意味着更多的功能、更好的界面以及更少的 BUG。但是作为软件的开发者，事情却不一定是这样。
@@ -57,7 +71,7 @@ $ sudo apt install git-all
 ### 3.2 Windows环境下安装 Git
 Windows环境下安装 Git 有很多选择，因为有很多基于Git的图形工具自带Git，不过本文推荐安装标准的 Git for Windows（带有图形界面），可以点击[此链接](https://git-scm.com/download/win)获取安装包。
 
-从该链接下载的是 Git for Windows 的安装包，下载完成后打开即可安装，安装过程可以参考另一篇博客：[安装 Git for Windows]()。
+从该链接下载的是 Git for Windows 的安装包，下载完成后打开即可安装，安装过程可以参考另一篇博客：[安装 Git for Windows]({{ gfw_page.first.url }})。
 
 
 虽然 Git 支持 Windows，但是依然建议在 Linux 环境学习 Git，原因有三：
@@ -70,7 +84,7 @@ Windows环境下安装 Git 有很多选择，因为有很多基于Git的图形�
 
 <br/>
 
-[下一章](./git_learning_2.md)我们将会介绍 Git 的基本操作方式。
+下一篇我们将会介绍 Git 的基本操作方式。
  
 <br id="annotation"/>
 
@@ -81,3 +95,14 @@ Windows环境下安装 Git 有很多选择，因为有很多基于Git的图形�
 > 2\. 开发一个新版本，往往有很多很多次修改，很多时候我们需要查看某一次修改做出的改动，而不仅仅是查看两个版本间做出的改动。
 
 > 3\. Git自身的源代码是开放的，位于 https://github.com/git/git
+
+
+
+
+
+
+
+
+
+
+{% include pre_post_nav.html %}

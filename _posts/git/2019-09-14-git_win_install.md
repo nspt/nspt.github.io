@@ -3,6 +3,7 @@ layout: article
 category: git
 title: 安装 Git for Windows
 description: 在Windows环境下安装Git及相关命令行工具（即Git for Windows）。
+tag: git_win_install
 ---
 ### 1.获取 Git for Windows 安装包
 前往 [https://git-scm.com/download/win](https://git-scm.com/download/win) 获取安装包

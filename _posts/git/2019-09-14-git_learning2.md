@@ -2,8 +2,21 @@
 layout: article
 category: git
 title: Git：基本设置、基本操作与工作原理
-description: Git学习系列的第二章，简介Git的初始化、配置，利用Git进行版本管理的基本操作：add、commit、log等，以及相关操作的背后逻辑。
+description: Git学习系列的第二篇，简介Git的初始化、配置，利用Git进行版本管理的基本操作：add、commit、log等，以及相关操作的背后逻辑。
+tag: git_learning2
 ---
+{% assign post_page = site.posts | where: "tag", "git_learning3" %}
+{% assign pre_page  = site.posts | where: "tag", "git_learning1" %}
+
+
+
+
+
+
+
+
+
+
 - ## [1.让 Git 接手项目的历史管理](#1)
 - ## [2.Git 的配置项](#2)
 - ## [3.尝试提交和查看历史](#3)
@@ -18,9 +31,9 @@ description: Git学习系列的第二章，简介Git的初始化、配置，利�
 - ## [额外内容](#extension)
 	- ### [git log的其它常用参数](#extension)
 
-<br/><br/><br/>
+<br/><br/>
 
-[上一章](/git/git_learning_1.md)我们了解了版本控制软件 Git 以及它的安装方法，而这一章我们将看到利用 Git 对项目进行版本控制需要哪些操作，以及这些操作背后的原理是什么。
+上一篇我们了解了版本控制软件 Git 以及它的安装方法，而这一篇我们将看到利用 Git 对项目进行版本控制需要哪些操作，以及这些操作背后的原理是什么。
 
 不过在我们实际操作 Git 之前，需要说明的是，Git 虽然是“版本控制系统”，但其实管理的是“提交历史”。一般项目做出一定量的改动，比如修正了一个BUG后，我们就会进行一次提交（commit），commit 相当于告诉 Git：将项目当前的状态记录下来。换句话说，一次 commit 就产生项目的一个“历史节点”，而 Git 管理的就是由 commit 组成的历史。我们通过 commit 历史，就可以查看项目的历次改动，在必要时还可以将项目回退至某个 commit。
 
@@ -249,7 +262,7 @@ $
 
 > _`less` 是一个 Unix/Linux 工具，用于滚动查看很长的文本，基本使用方法为：J键下滚，K键上滚，Q键退出。_
 
-`git log` 还支持以更简洁或更丰富的形式展示 commit 的改动，甚至支持自定义展示格式，不过由于并不常用，此处不作介绍，以免内容过于冗长。不过 `git log` 所支持的历史检索功能还是比较有用的，比如查出哪些 commit 改动了特定代码、特定文件等，希望对此有所了解的，可以前往本章结尾的[额外内容](#extension)处查看。
+`git log` 还支持以更简洁或更丰富的形式展示 commit 的改动，甚至支持自定义展示格式，不过由于并不常用，此处不作介绍，以免内容过于冗长。不过 `git log` 所支持的历史检索功能还是比较有用的，比如查出哪些 commit 改动了特定代码、特定文件等，希望对此有所了解的，可以前往本篇结尾的[额外内容](#extension)处查看。
 
 接下来的第四节中，我们将要介绍 Git 是如何看待 commit 和 commit 历史的，以及 Git 的关键设计：三个区域。明白 Git 的 “历史观” 以及 “三个区域” 的设计对于使用好 Git 至关重要。
 
@@ -481,7 +494,7 @@ $
 
 同时我们可以看到，`git status` 还给出了对操作的提示，比如 “use 'git add <file>...' to update what will be committed” 告诉我们如果想要将改动了的文件加入到暂存区（从而准备被加入到下次 commit 中），要用 `git add <file>`，同理，“use 'git add <file>...' to include in what will be committed” 告诉我们对于未追踪文件，也是用 `git add` 加入到暂存区。
 
-Git 的命令提示还是比较完善的，有时候我们即便不知道某个操作如何完成，也可以借助 Git 的提示达到目的，比如上面的提示：“use 'git checkout -- <file>...' to discard changes in working directory”，就告诉了我们该如何放弃对某个文件的改动，也就是将某个文件恢复到原来的样子（即暂存区中对应文件的样子）。不过关于撤销改动等操作，我们此处暂不做介绍，下一章再做详细解释，如果感兴趣的话，可以先按照 Git 的提示进行尝试。
+Git 的命令提示还是比较完善的，有时候我们即便不知道某个操作如何完成，也可以借助 Git 的提示达到目的，比如上面的提示：“use 'git checkout -- <file>...' to discard changes in working directory”，就告诉了我们该如何放弃对某个文件的改动，也就是将某个文件恢复到原来的样子（即暂存区中对应文件的样子）。不过关于撤销改动等操作，我们此处暂不做介绍，下一篇再做详细解释，如果感兴趣的话，可以先按照 Git 的提示进行尝试。
 
 现在，让我们将改动后的 main.cpp'' 加入暂存区：
 
@@ -721,7 +734,7 @@ $
 
 <br/><br/>
 
-通过本章学习到的 `git add` 和 `git commit`，我们可以记录新的改动，创建新的历史节点；通过 `git log` 和 `git show`，我们可以查看历史提交，以及它们带来的改动；而通过 `git status`，我们可以随时查看目前的项目状态，也即三个区域的情况。
+通过本篇学习到的 `git add` 和 `git commit`，我们可以记录新的改动，创建新的历史节点；通过 `git log` 和 `git show`，我们可以查看历史提交，以及它们带来的改动；而通过 `git status`，我们可以随时查看目前的项目状态，也即三个区域的情况。
 
 但是，依然有很多问题我们尚未说明如何解决，比如：
 
@@ -732,7 +745,7 @@ $
 5. 我只想将某个文件回退到某个历史节点的样子，该怎么做？
 ...
 
-[下一章]()我们将介绍新的 Git 工具（不是高级工具，依然是基本工具），并解决这些问题。
+下一篇我们将介绍新的 Git 工具（不是高级工具，依然是基本工具），并解决这些问题。
 
 <br/><br id="extension"/>
 
@@ -755,3 +768,14 @@ $
 > 1\. 没有人会去记 Git 的所有配置项，一般情况下我们只在需要利用 Git 配置完成某个目的时，再查询 Git 如何配置，比如“禁止删除服务器上的 commit 历史”。完整的 Git 配置文档可在 [Git 配置](https://stackoverflow.com/questions/9392365/how-would-git-handle-a-sha-1-collision-on-a-blob) 查询。
 
 > 2\. 理论上参与 SHA-1 运算的数据不一样，也可以出现一样的结果数字，但是这种情况对于正常使用来说，完全不用担心，如果你对出现了该情况时 Git 会有什么表现感兴趣，可以参考 stackoverflow 网站上的这个[问题](https://stackoverflow.com/questions/9392365/how-would-git-handle-a-sha-1-collision-on-a-blob)。
+
+
+
+
+
+
+
+
+
+
+{% include pre_post_nav.html %}
