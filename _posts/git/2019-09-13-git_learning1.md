@@ -8,7 +8,7 @@ tag: git_learning1
 {% assign post_page = site.posts | where: "tag", "git_learning2" %}
 {% assign pre_page  = nil %}
 {% assign gfw_page  = site.posts | where: "tag", "git_win_install" %}
-
+{% include pre_post_nav.html %}
 
 
 

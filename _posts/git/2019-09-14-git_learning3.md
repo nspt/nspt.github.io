@@ -64,7 +64,7 @@ On branch master
 Changes to be committed:
   (use "git restore --staged <file>..." to unstage)
         new file:   .gitignore
-$
+$ 
 ```
 
 从 “Changes to be committed” 可以看出，项目目录下的 main.o 和 MyProgram 都没有被加入暂存区，原因就是他们在 .gitignore 中被记录了。
