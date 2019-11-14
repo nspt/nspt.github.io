@@ -1,6 +1,7 @@
 ---
 layout: article
 category: git
+author: 谢维
 title: Git：版本控制、Git简介与安装
 description: Git学习系列的第一篇，简介版本控制的概念，Git的基本信息及安装方法。
 tag: git_learning1

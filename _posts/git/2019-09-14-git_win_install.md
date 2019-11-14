@@ -1,6 +1,7 @@
 ---
 layout: article
 category: git
+author: 谢维
 title: 安装 Git for Windows
 description: 在Windows环境下安装Git及相关命令行工具（即Git for Windows）。
 tag: git_win_install
