@@ -12,7 +12,7 @@ layout: blog_list
 			{{ post.description }}
 		</p>
 		<p style="text-align:right">
-			{{ post.date | date_to_string }} - 谢维
+			{{ post.date | date_to_string }} - {{ post.author }}
 		</p>
 	{% endif %}
 {% endfor %}
