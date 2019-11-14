@@ -1,7 +1,7 @@
 ---
 layout: article
 category: git
-author:谢维
+author: 谢维
 title: Git：基本设置、基本操作与工作原理
 description: Git学习系列的第二篇，简介Git的初始化、配置，利用Git进行版本管理的基本操作：add、commit、log等，以及相关操作的背后逻辑。
 tag: git_learning2
